@@ -16,19 +16,18 @@ public class LList<E> {
     public void add(E data){
         Node newHead = new Node(data);
 
-        //check of de voorste node de laatste is
         if(head == null){
             head = newHead;
             return;
         }
 
-        Node temp = head;
+        Node tmp = head;
 
-        while (temp.next != null){
-            temp = temp.next;
+        while (tmp.next != null){
+            tmp = tmp.next;
         }
 
-        temp.next = newHead;
+        tmp.next = newHead;
 
     }
 
@@ -40,7 +39,6 @@ public class LList<E> {
     }
 
     public int getCount(){
-        //check of list leeg is
         if (head == null){
             return 0;
         }
@@ -48,7 +46,6 @@ public class LList<E> {
         Node tmp = head;
         int counter = 0;
 
-        //loop door alle nodes
         while (tmp != null){
             counter++;
             tmp = tmp.next;
